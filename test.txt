@@ -1,0 +1,41 @@
+# Ballistic calculator input file
+# .224 / 88 gr, G7 0.247, 1:7 twist  (values from the terminal session)
+# Format: key = value [unit]. Units may be mixed (m, yd, ft, in, cm, mm, m/s, fps, mph,
+# km/h, gr, g, C, F, hPa, inHg, mmHg ...). Lines starting with # are comments.
+# Run:  ballistics inputs/223_88gr.txt          (lets you change output options)
+#       ballistics inputs/223_88gr.txt --batch  (no prompts)
+
+# --- Bullet ---
+drag_model          = G7
+bc                  = 0.274
+muzzle_velocity     = 2600 fps
+bullet_weight       = 88 gr
+bullet_diameter     = 0.224 in
+bullet_length       = 1.245 in
+
+# --- Rifle ---
+twist               = 7 in           # 1:7
+twist_direction     = R
+sight_height        = 2.5 in
+zero_range          = 100 yd
+
+# --- Weather ---
+temperature         = 59 F
+humidity            = 50 %
+altitude            = 1000 ft
+pressure_type       = barometric
+pressure            = 29.92 inHg
+wind_speed          = 10 mph
+wind_direction      = 90             # compass direction wind blows FROM, 0 = N
+
+# --- Shot ---
+shooting_direction  = 0              # compass, 0 = N
+shooting_angle      = 0              # + uphill / - downhill
+latitude            = 0              # + N / - S
+
+# --- Output ---
+max_range           = 3800 y
+range_step          = 100 y
+range_unit          = yd              # m | yd
+output_units        = us         # metric | us
+corrections         = moa	# mil | moa
